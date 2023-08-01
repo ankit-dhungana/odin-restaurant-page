@@ -1,5 +1,6 @@
 const createNavElem = (text, href) => {
   const elem = document.createElement("a");
+  elem.classList.add("nav-elem");
   elem.textContent = text;
   elem.href = href;
   return elem;

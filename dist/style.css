@@ -9,7 +9,7 @@ header {
   color: #fff;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  height: 20vh;
+  height: fit-content;
 }
 
 header > h1 {
@@ -26,6 +26,10 @@ header > h1 {
   font-size: 1.5rem;
   text-align: center;
   background-color: #3333332e;
+  /* position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; */
 }
 
 nav > a {
@@ -35,6 +39,11 @@ nav > a {
 }
 
 nav > a:hover {
+  color: #ccc;
+  border-bottom: #fff 1px solid;
+}
+
+nav > a:active {
   color: #ccc;
   border-bottom: #fff 1px solid;
 }
@@ -85,4 +94,82 @@ img.slide {
   border-radius: 5px;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* menu page */
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin: 2rem 0;
+  color: rgb(248, 248, 248);
+  padding: 1rem;
+}
+
+.menu-card {
+  width: 100%;
+  height: min(400px, 25rem);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  justify-content: space-between;
+}
+
+.menu-card > * {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.price {
+  align-self: flex-end;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 2.5rem;
+}
+
+.menu-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+/* contact page */
+.contact-info {
+  background-color: #333;
+  padding: 1rem;
+}
+.contact-info > h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.contact-card {
+  width: max(80%, 30vw);
+  height: 80vh;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 2rem;
 }
